@@ -172,7 +172,7 @@ public class Testfiles {
 			}
 		}
 		else {
-			System.out.println("不存在不存在不存在不存在不存在");
+			System.out.println("不存在");
 		}
 	}
 	
