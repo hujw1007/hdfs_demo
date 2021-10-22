@@ -18,7 +18,7 @@ public class Testfiles {
 	public void createDir() throws Exception {
 		Configuration conf = new Configuration();
 		//指定HDFS集群地址
-		URI uri = new URI("hdfs://hadoop0:9000");
+		URI uri = new URI("hdfs://hadoop00:9000");
 		//创建文件系统对象
 		FileSystem fs = FileSystem.get(uri, conf);
 		//创建文件目录
@@ -43,7 +43,7 @@ public class Testfiles {
 	@Test
 	public void putFiles() throws Exception {
 		//创建文件系统对象
-		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop0:9000"), new Configuration());
+		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop00:9000"), new Configuration());
 		//定义本地文件路径（两个路径位置）
 		Path win_local1 = new Path("D:/data1.txt");
 		Path win_local2 = new Path("E:/data2.txt");
@@ -64,7 +64,7 @@ public class Testfiles {
 	
 	@Test
 	public void getFiles() throws Exception {
-		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop0:9000"), new Configuration());
+		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop00:9000"), new Configuration());
 		//定义要将文件保存到的本地路径
 		Path dispath = new Path("E:/data");
 		//定义要下载HDFS文件的存储位置
@@ -106,7 +106,7 @@ public class Testfiles {
 	
 	@Test
 	public void deleteFiles() throws Exception {
-		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop0:9000"), new Configuration());
+		FileSystem fs = FileSystem.get(new URI("hdfs://hadoop00:9000"), new Configuration());
 		//删除文件，第2个参数为是否递归删除文件夹及文件夹下的数据文件
 		fs.delete(new Path("/input/data1.txt"),true);
 		//关闭连接
