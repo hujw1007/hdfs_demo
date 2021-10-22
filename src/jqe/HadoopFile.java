@@ -109,6 +109,7 @@ public class HadoopFile {
 			}
 		} finally {
 			IOUtils.closeStream(writer);
+			fileReader.close();
 		}
 	}
 
